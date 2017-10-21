@@ -13,20 +13,26 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from Tkinter import Tk
 from tkFileDialog import askopenfilename
-#import xlsxwriter
+import os
+
+#==============================================================================
+# IMPORTANT!
+#
+# RUN %gui tk in console first!
+#==============================================================================
 
 #==============================================================================
 # Setting variables
 #==============================================================================
 TimeBetweenMeasurements = 5 #Minutes between datasets...
-MinimalValue = 1
+MinimalValue = 0
 
 #==============================================================================
 # Selecting File using GUI
 #==============================================================================
-#Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
-#filename = askopenfilename() # show an "Open" dialog box and return the path to the selected file
-filename = '../Data/20172021_lagoon.log'
+Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
+filename = askopenfilename() # show an "Open" dialog box and return the path to the selected file
+#filename = '../Data/20172021_lagoon.log'
 print(filename)
 
 #==============================================================================
